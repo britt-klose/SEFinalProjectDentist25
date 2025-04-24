@@ -1,0 +1,21 @@
+procedure_id,procedure_name
+1,Root Canal
+2,Crown
+3,Periodontal Surgery
+4,Fluoride
+5,X-Ray
+6,Dentures
+7,Veneer
+8,Teeth Whitening
+9,Tooth Extraction
+10,Wisdom Teeth
+11,Teeth Cleaning
+12,Dental Sealant 
+13,Filling 
+14,Bridge
+15,Dental Bonding 
+16,Dental Implant
+17,Dental restoration
+18,Tooth Repairment 
+19,Invisalign
+20,Maxillary osteotomy 
