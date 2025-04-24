@@ -1,0 +1,101 @@
+record_id,patient_id,procedure_id,procedure_date,Dentist,Assistant ,notes
+1,1,1,2024-02-02,Brittany Klose,Sam Winchester,"""Infection removed"""
+2,2,2,2022-01-27,John Smith ,Nathaniel Bacon,
+3,6,3,2025-03-10,Samuel Duro-Aina,Nicolas Jackson,
+4,8,1,2022-04-19,Brittany Klose,Mark Grayson,"""Bacteria treated"""
+5,99,2,2023-06-07,John Smith ,Nolan Edward,
+6,77,3,2023-06-08,Samuel Duro-Aina,Harry Potter,
+7,88,5,2024-05-08,Brittany Klose,Sam Winchester,
+8,43,18,2024-05-09,John Smith ,Nathaniel Bacon,
+9,23,12,2024-05-10,Samuel Duro-Aina,Nicolas Jackson,
+10,3,11,2023-01-22,Brittany Klose,Mark Grayson,"""May have a cavity"""
+11,4,17,2024-03-02,John Smith ,Nolan Edward,
+12,5,11,2024-03-03,Samuel Duro-Aina,Harry Potter,"""Teeth look good"""
+13,6,11,2024-03-04,Brittany Klose,Sam Winchester,"""Teeth look good"""
+14,7,11,2024-12-02,John Smith ,Nathaniel Bacon,"""Teeth look good"""
+15,5,11,2023-11-11,Samuel Duro-Aina,Nicolas Jackson,"""Teeth look good"""
+16,7,11,2022-10-22,Brittany Klose,Mark Grayson,"""Teeth look good"""
+17,4,11,2022-10-23,John Smith ,Nolan Edward,"""Teeth look good"""
+18,23,19,2022-10-24,Samuel Duro-Aina,Harry Potter,
+19,22,20,2024-08-18,Brittany Klose,Sam Winchester,
+20,55,11,2024-09-27,John Smith ,Nathaniel Bacon,"""Teeth look good"""
+21,54,11,2022-09-14,Samuel Duro-Aina,Nicolas Jackson,"""Needs to floss more"""
+22,34,10,2024-04-13,Brittany Klose,Mark Grayson,
+23,35,10,2025-02-17,John Smith ,Nolan Edward,
+24,33,10,2025-01-14,Samuel Duro-Aina,Harry Potter,
+25,66,10,2025-01-15,Brittany Klose,Sam Winchester,
+26,65,10,2025-01-16,John Smith ,Nathaniel Bacon,
+27,77,8,2025-02-04,Samuel Duro-Aina,Nicolas Jackson,"""Whitening"""
+28,71,8,2024-12-09,Brittany Klose,Mark Grayson,"""Whitening"""
+29,72,8,2023-03-16,John Smith ,Nolan Edward,"""Whitening"""
+30,33,9,2024-05-20,Samuel Duro-Aina,Harry Potter,"""Gum healing well"""
+31,88,9,2023-06-03,Brittany Klose,Sam Winchester,"""Removed 29"""
+32,85,19,2023-06-04,John Smith ,Nathaniel Bacon,"""week 3 of invisalign"""
+33,44,11,2024-04-18,Samuel Duro-Aina,Nicolas Jackson,"""Back tooth is sore"""
+34,55,11,2024-08-30,Brittany Klose,Mark Grayson,"""Back teeth are sore"""
+35,33,16,2024-11-29,John Smith ,Nolan Edward,"""Input dental implant"""
+36,19,15,2023-04-04,Samuel Duro-Aina,Harry Potter,
+37,18,1,2025-04-26,Brittany Klose,Sam Winchester,
+38,22,11,2019-03-17,John Smith ,Nathaniel Bacon,"""May have a cavity"""
+39,20,1,2020-11-20,Samuel Duro-Aina,Nicolas Jackson,
+40,73,11,2020-10-04,Brittany Klose,Mark Grayson,
+41,70,1,2020-03-13,John Smith ,Nolan Edward,
+42,54,11,2021-12-11,Samuel Duro-Aina,Harry Potter,
+43,66,1,2021-01-11,Brittany Klose,Sam Winchester,
+44,62,11,2024-04-15,John Smith ,Nathaniel Bacon,
+45,60,19,2024-05-16,Samuel Duro-Aina,Nicolas Jackson,
+46,49,19,2024-07-22,Brittany Klose,Mark Grayson,
+47,47,8,2023-07-20,John Smith ,Nolan Edward,"""Whitening"""
+48,45,8,2023-08-27,Samuel Duro-Aina,Harry Potter,"""Whitening"""
+49,47,8,2023-08-28,Brittany Klose,Sam Winchester,"""Whitening"""
+50,43,8,2023-09-20,John Smith ,Nathaniel Bacon,
+51,39,10,2022-01-22,Samuel Duro-Aina,Nicolas Jackson,"""Lot of swelling but healing good."""
+52,38,10,2022-02-19,Brittany Klose,Mark Grayson,
+53,30,4,2022-06-12,John Smith ,Nolan Edward,
+54,32,4,2023-06-14,Samuel Duro-Aina,Harry Potter,
+55,2,12,2023-06-03,Brittany Klose,Sam Winchester,
+56,4,4,2022-07-01,John Smith ,Nathaniel Bacon,
+57,5,12,2021-05-04,Samuel Duro-Aina,Nicolas Jackson,
+58,7,10,2025-05-19,Brittany Klose,Mark Grayson,"""Lot of swelling but healing good."""
+59,13,10,2025-03-18,John Smith ,Nolan Edward,"""Lot of swelling but healing good."""
+60,17,1,2024-02-18,Samuel Duro-Aina,Harry Potter,
+61,29,11,2023-01-14,Brittany Klose,Sam Winchester,"""Needs to floss more"""
+62,22,1,2019-12-13,John Smith ,Nathaniel Bacon,
+63,39,11,2019-12-15,Samuel Duro-Aina,Nicolas Jackson,"""May have a cavity"""
+64,38,11,2018-11-16,Brittany Klose,Mark Grayson,"""Teeth look good"""
+65,45,1,2018-11-20,John Smith ,Nolan Edward,
+66,49,4,2018-11-21,Samuel Duro-Aina,Harry Potter,
+67,48,4,2017-12-22,Brittany Klose,Sam Winchester,
+68,46,4,2017-01-23,John Smith ,Nathaniel Bacon,
+69,44,1,2016-06-24,Samuel Duro-Aina,Nicolas Jackson,
+70,41,1,2016-06-25,Brittany Klose,Mark Grayson,
+71,90,11,2015-07-25,John Smith ,Nolan Edward,"""May have a cavity"""
+72,99,4,2015-07-26,Samuel Duro-Aina,Harry Potter,
+73,96,4,2017-08-27,Brittany Klose,Sam Winchester,
+74,95,1,2019-05-28,John Smith ,Nathaniel Bacon,
+75,94,1,2024-04-29,Samuel Duro-Aina,Nicolas Jackson,"""Needs to floss more"""
+76,93,11,2022-04-30,Brittany Klose,Mark Grayson,
+77,86,4,2022-06-30,John Smith ,Nolan Edward,
+78,87,12,2014-07-31,Samuel Duro-Aina,Harry Potter,
+79,71,8,2014-11-30,Brittany Klose,Sam Winchester,"""Teeth look good"""
+80,73,8,2016-10-29,John Smith ,Nathaniel Bacon,"""Teeth look good"""
+81,6,8,2016-11-29,Samuel Duro-Aina,Nicolas Jackson,"""Teeth look good"""
+82,5,8,2017-12-26,Brittany Klose,Mark Grayson,
+83,40,13,2017-11-22,John Smith ,Nolan Edward,"""Back teeth"""
+84,57,13,2015-12-13,Samuel Duro-Aina,Harry Potter,"""Front right tooth"""
+85,54,13,2015-11-08,Brittany Klose,Sam Winchester,
+86,53,18,2019-12-08,John Smith ,Nathaniel Bacon,"""Back molar"""
+87,52,18,2019-04-08,Samuel Duro-Aina,Nicolas Jackson,"""Back molar"""
+88,51,5,2018-04-03,Brittany Klose,Mark Grayson,
+89,50,5,2018-05-04,John Smith ,Nolan Edward,"""Teeth look good"""
+90,43,5,2010-05-09,Samuel Duro-Aina,Harry Potter,"""Teeth look good"""
+91,10,5,2010-06-10,Brittany Klose,Sam Winchester,"""Upper jaw crooked"""
+92,12,6,2012-06-10,John Smith ,Nathaniel Bacon,
+93,13,6,2012-07-11,Samuel Duro-Aina,Nicolas Jackson,
+94,19,7,2013-07-12,Brittany Klose,Mark Grayson,
+95,17,2,2017-08-13,John Smith ,Nolan Edward,
+96,18,3,2018-08-14,Samuel Duro-Aina,Harry Potter,
+97,16,7,2022-08-15,Brittany Klose,Sam Winchester,
+98,9,14,2020-01-16,John Smith ,Nathaniel Bacon,
+99,7,15,2012-02-17,Samuel Duro-Aina,Nicolas Jackson,"""Input dental implant"""
+100,93,16,2013-01-18,Brittany Klose,Mark Grayson,"""Back teeth are sore"""

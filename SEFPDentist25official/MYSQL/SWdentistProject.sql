@@ -25,9 +25,13 @@ CREATE TABLE patients (
 );
 
 -- Create Procedures Table
+drop table if exists procedures;
 CREATE TABLE procedures (
     procedure_id INT PRIMARY KEY AUTO_INCREMENT,
-    procedure_name VARCHAR(100) NOT NULL
+    procedure_name VARCHAR(100) NOT NULL,
+    description VARCHAR(300),
+    start_price int,
+    requires_anestesia VARCHAR(100) NOT NULL
 );
 
 -- Create Patient History Table
@@ -62,7 +66,6 @@ select * from patient_history;
 SELECT DISTINCT dentist FROM patient_history;
 
 SELECT DISTINCT assistant FROM patient_history;
-
 
 
 

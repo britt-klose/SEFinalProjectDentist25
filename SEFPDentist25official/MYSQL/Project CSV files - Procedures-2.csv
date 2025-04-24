@@ -1,0 +1,23 @@
+procedure_id,procedure_name,description,start_price,requires_anestesia 
+1,Root Canal,Treatment sequence for the infected pulp of a tooth that is intended to result in the elimination of infection and the protection of the decontaminated tooth from future microbial invasion.,900,Y
+2,Crown,Used to repair teeth that have been badly damaged by decay or injury.,1200,N
+3,Periodontal Surgery,"Any procedure that aims to treat and prevent periodontaldisease, which affects the gum tissues and bone",6000,Y
+4,Fluoride,"An inorganic, monatomic anion of fluorine, with the chemical formula F. Fluoride treatments help to prevent cavities by making the teeth more resistant to acid attacks",35,N
+5,X-Ray, Used to gain insight into the structure of teeth and jaw bones and evalutate health of mouth and teeth,150,N
+6,Dentures,"Prosthetic devices constructed to replace missing teeth, supported by the surrounding soft and hard tissues of the oral cavity. ",4000,N
+7,Veneers,A layer of material placed over a tooth. Veneers can improve the aesthetics and function of a smile and protect the tooth's surface from damage.,1000,N
+8,Teeth Whitening,Tooth whitening or tooth bleaching is the process of lightening the colour of human teeth,500,N
+9,Tooth Extraction Simple,Removal of teeth from the dental alveolus in the alveolar bone. ,80,N
+10,Wisdom Teeth,"Wisdom teeth can sometimes emerge at an angle or get stuck and only emerge partially, and therefore should be removed.",250,Y
+11,Teeth Cleaning,"Involves the removal of dental plaque from teeth with the intention of preventing cavities, gingivitis, and periodontal disease.",90,N
+12,Dental Sealant ,Dental fissure sealants are a protective layer on the back teeth (molars) to prevent cavities.,45,N
+13,Filling ,"Composite fillings, also called white, plastic, or tooth-colored fillings, fill cavities with a tooth-colored resin made of powdered glass and plastic resin.",200,N
+14,Bridge,Fixed dental restoration used to replace one or more missing teeth by joining an artificial tooth definitively to adjacent teeth,3000,N
+15,Dental Bonding ,"Involves the use of a tooth-colored composite resin material to repair or improve chips, cracks, and gaps in teeth.",300,N
+16,Dental Implant,"A dental implant is a prosthesis that interfaces with the bone of the jaw or skull to support a dental prosthesis such as a crown, bridge, denture, or facial prosthesis or to act as an orthodontic anchor.",3000,Y
+17,Dental Restoration,"Treatments used to restore the function, integrity, and morphology of missing tooth",7000,Y
+18,Tooth Extraction Surgical ,Removal of teeth from the dental alveolus in the alveolar bone using saw or dental surgical tools,500,Y
+19,Invisalign,"Goal is to straighten and correct crooked teeth.  Invisalign is less visible and slower acting than braces, but are still a very effective",4000,N
+20,Maxillary osteotomy ,"Also known as upper jaw surgery, is a surgical procedure that corrects misalignments or abnormalities in the upper jaw. It involves surgically cutting and repositioning the upper jaw bone to improve alignment and function.",25000,Y
+21,Bone Grafting,Type of transplantation used to replace missing bone tissue or stimulate the healing of fractures. May be used to help dentures or implants fit more comfortably,5000,Y
+22,Cleft Lip palate repair,Cosmetic surgical repair of a cleft palate or cleft lip,6000,Y
