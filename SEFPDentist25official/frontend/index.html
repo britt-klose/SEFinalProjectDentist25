@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="Online Cafe store" />
+        <meta name="Deare Abudushalamu, Brittany Klose, Katrina Cwiertniewicz" content="" />
+        <title>Project</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="/DBFinalProject/assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+        <link href="/DBFinalProject/cssFiles/styles.css" rel="stylesheet" />
+        <link href="/DBFinalProject/cssFiles/img.css" rel="stylesheet"/>
+        <link rel = "stylesheet" href = "style.css">
+        <script src = "design.js" defer></script>
+    </head>
+    <body>
+<h1>HEALTH WEBPAGE</h1>
+<nav>
+<img src = " /images/Health.jpg" class = "logo">
+
+<ul>
+    <li><a href = "">Description</a></li>
+    <li><a href = "">Patients Data</a></li>
+    <li><a href = "">Procedures</a></li>
+</ul>
+</nav>
+
+  <!-- Patient Form Section -->
+  <section>
+    <h2>Add or Update a Patient</h2>
+    <p>Use this form to add new dental patients or update existing patient records in the system.</p>
+    <p>Include full name, age, and gender so we can properly manage their dental history and appointments.</p>
+
+    <form id="patientForm">
+      <label for="patientId">Patient ID (leave blank to add new):</label>
+      <input type="text" id="patientId" name="patientId">
+
+      <label for="patientName">Name:</label>
+      <input type="text" id="patientName" name="patientName" required>
+
+      <label for="patientAge">Age:</label>
+      <input type="number" id="patientAge" name="patientAge" required>
+
+      <label for="patientGender">Gender:</label>
+      <select id="patientGender" name="patientGender">
+        <option value="Male">Male</option>
+        <option value="Female">Female</option>
+        <option value="Other">Other</option>
+      </select>
+
+      <button type="submit">Submit Patient</button>
+    </form>
+  </section>
+
+  <!-- Delete Patient Section -->
+  <section>
+    <h2>Delete a Patient</h2>
+    <p>If a patient has moved or their record is no longer needed, use this form to remove them from the system.</p>
+
+    <form id="deletePatientForm">
+      <label for="deletePatientId">Patient ID:</label>
+      <input type="text" id="deletePatientId" name="deletePatientId" required>
+      <button type="submit">Delete Patient</button>
+    </form>
+  </section>
+
+  <!-- Procedure Section -->
+  <section>
+    <h2>Add or Update a Procedure</h2>
+    <p>Record dental procedures such as cleanings, fillings, or root canals. Update costs as needed to reflect current pricing.</p>
+
+    <form id="procedureForm">
+      <label for="procedureId">Procedure ID (leave blank to add new):</label>
+      <input type="text" id="procedureId" name="procedureId">
+
+      <label for="procedureName">Procedure Name:</label>
+      <input type="text" id="procedureName" name="procedureName" required>
+
+      <label for="procedureCost">Cost:</label>
+      <input type="number" id="procedureCost" name="procedureCost" required>
+
+      <button type="submit">Submit Procedure</button>
+    </form>
+  </section>
+
+  <!-- Delete Procedure Section -->
+  <section>
+    <h2>Delete a Procedure</h2>
+    <p>Use this form to remove outdated or duplicate dental procedures from the database.</p>
+
+    <form id="deleteProcedureForm">
+      <label for="deleteProcedureId">Procedure ID:</label>
+      <input type="text" id="deleteProcedureId" name="deleteProcedureId" required>
+      <button type="submit">Delete Procedure</button>
+    </form>
+  </section>
+
+  <!-- Office Visit Section -->
+  <section>
+    <h2>Add or Update an Office Visit</h2>
+    <p>Log office visits to keep track of a patient’s treatment history. Include procedure details and visit dates.</p>
+
+    <form id="visitForm">
+      <label for="visitId">Visit ID (leave blank to add new):</label>
+      <input type="text" id="visitId" name="visitId">
+
+      <label for="patientIdVisit">Patient ID:</label>
+      <input type="text" id="patientIdVisit" name="patientIdVisit" required>
+
+      <label for="procedureIdVisit">Procedure ID:</label>
+      <input type="text" id="procedureIdVisit" name="procedureIdVisit" required>
+
+      <label for="visitDate">Visit Date:</label>
+      <input type="date" id="visitDate" name="visitDate" required>
+
+      <button type="submit">Submit Visit</button>
+    </form>
+  </section>
+
+  <!-- Delete Visit Section -->
+  <section>
+    <h2>Delete an Office Visit</h2>
+    <p>Remove a visit entry if it was recorded in error or needs to be cleared from the system.</p>
+
+    <form id="deleteVisitForm">
+      <label for="deleteVisitId">Visit ID:</label>
+      <input type="text" id="deleteVisitId" name="deleteVisitId" required>
+      <button type="submit">Delete Visit</button>
+    </form>
+  </section>
+    </body>
+    
+    </html>

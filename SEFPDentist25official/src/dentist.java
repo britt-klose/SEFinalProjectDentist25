@@ -1,4 +1,5 @@
 import java.sql.*;
+//import java.util.Scanner;
 
 public class dentist {
     static final String DB_URL="jdbc:mysql://localhost/dentistsdb";
