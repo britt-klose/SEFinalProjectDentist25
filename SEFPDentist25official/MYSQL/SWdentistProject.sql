@@ -14,6 +14,7 @@ CREATE TABLE patients (
     phone  varchar(200),
     email varchar(50) not null,
     date_of_birth DATE NOT NULL,
+    -- update DOB to a string instead of a date
     address varchar(100) not null,
     city varchar(100),
     state  varchar(100),
@@ -31,7 +32,8 @@ CREATE TABLE procedures (
     procedure_name VARCHAR(100) NOT NULL,
     description VARCHAR(300),
     start_price int,
-    requires_anestesia VARCHAR(100) NOT NULL
+    requires_anestesia VARCHAR(100) NOT NULL 
+    -- needs to be updated to anesthesia
 );
 
 -- Create Patient History Table
