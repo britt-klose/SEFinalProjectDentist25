@@ -46,16 +46,16 @@ public class dentist {
 					System.out.print("enter phone: ");
 					String strPhone=input.next();
 
-                    System.out.print("enter email: ");
-					String strEmail=input.next();
+                    // System.out.print("enter email: ");
+					// String strEmail=input.next();
 
-                    System.out.print("enter DOB: ");
-					String strDOB=input.next();
+                    // System.out.print("enter DOB: ");
+					// String strDOB=input.next();
                     //Date strDOB1 = new SimpleDateFormat("dd-MM-yyyy").parse(strDOB); 
 
 					
-					strSQL="insert into patients values('" + SSN + "', '" + strFirstname + "', '" + strLastname + "', '" + strPhone + "', " + strEmail + "', '" + strDOB + "', ";
-					strSQL=strSQL + "'address', 'city', 'state', 'zipecode', null)";
+					strSQL="insert into patients values('" + SSN + "', '" + strFirstname + "', '" + strLastname + "', '" + strPhone + "', ";
+					strSQL=strSQL + "'email', '1993-03-03', 'address', 'city', 'state', 'zipecode', 'F')";
 					System.out.println(strSQL);
 					stmt.executeUpdate(strSQL);
 					break;
