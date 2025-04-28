@@ -82,11 +82,11 @@ public class dentist {
 							System.out.print("Enter procedure description: ");
 							String strPDescription=input.next();
 							System.out.print("Enter procedure start price: ");
-							String strPrice=input.next();
+							int pPrice=input.nextInt();
 							System.out.print("Enter Y or N for requires anesthesia: ");
 							String strAnesthesisa=input.next();
 
-							strSQL="insert into procedures values('" + pId + "', '" + strPName + "', '" + strPDescription + "', '" + strPrice + "', '" + strAnesthesisa + "')";
+							strSQL="insert into procedures values('" + pId + "', '" + strPName + "', '" + strPDescription + "', '" + pPrice + "', '" + strAnesthesisa + "')";
 							stmt.executeUpdate(strSQL);
 							System.out.println(strSQL);
 							break;
@@ -102,8 +102,8 @@ public class dentist {
 							System.out.print("Enter new procedure description or 'x' to skip: ");
 							strPDescription=input.next();
 
-							System.out.print("Enter new procedure price or 'x' to skip: ");
-							strPrice=input.next();
+							System.out.print("Enter new procedure price or 0 to skip: ");
+							pPrice=input.nextInt();
 
 							System.out.print("Update to Y or N for requires anesthesia or 'x' to skip: ");
 							strAnesthesisa=input.next();
@@ -123,9 +123,9 @@ public class dentist {
 								stmt.executeUpdate(strSQL);
 							}
 							
-							if (!strPrice.equals("x"))
+							if (pPrice !=0)
 							{
-								strSQL="update procedures set start_price='" + strPrice + "' where procedure_id=" + pId;
+								strSQL="update procedures set start_price='" + pPrice + "' where procedure_id=" + pId;
 								System.out.println(strSQL);
 								stmt.executeUpdate(strSQL);
 							}
@@ -235,12 +235,13 @@ public class dentist {
 							System.out.println("===SEARCH===");
 							System.out.print("enter patient id: ");
 							int pId=input.nextInt();
+							System.out.println("Data for patient: " + pId);
 							
 							strSQL="select procedure_name, procedure_date, dentist, assistant, notes from patient_history inner join procedures on patient_history.procedure_id=procedures.procedure_id where patient_id='" + pId + "'";
 							rs = stmt.executeQuery(strSQL); 
 							while (rs.next())
 							{
-								System.out.print("Data for patient: " + pId);
+
 								System.out.println(rs.getString("procedure_name") + " ");
 								System.out.println(rs.getString("procedure_date") + " ");
 								System.out.println(rs.getString("dentist") + " ");
@@ -252,12 +253,103 @@ public class dentist {
 							
 					}
 					break;
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+					case "3": //Appointments
+					System.out.println("===APPOINTMENTS===");
+					System.out.println("\nType 'a' to add, 'u' to update, 'd' to delete an appointment: ");
+					String appointmentChoice=String.valueOf(input.next().charAt(0));
+					switch (appointmentChoice)
+					{
+						case "a":
+						System.out.println("===ADD===");	
+						System.out.println("Enter an appointment ID: ");
+						int recordID=input.nextInt();
+						System.out.println("Enter patientID: ");
+						int patientID=input.nextInt();
+						System.out.println("Enter procedureID: ");
+						int procedureID=input.nextInt();
+						System.out.println("Enter appointment date: ");
+						String appDate=input.next();
+						System.out.print("Enter dentist: ");
+						String dentistName=input.next();
+						System.out.print("Enter assistant: ");
+						String assistantName=input.next();
+						strSQL="insert into patient_history values('" + recordID + "', '" + patientID + "', '" + procedureID + "', '" + appDate + "', '" + dentistName + "', '" + assistantName + "', 'notes')";
+						System.out.println(strSQL);
+						stmt.executeUpdate(strSQL);
+						break;
 
-////////////////////////////////////////////////////////////////////////////////////////
+						case "u":
+						System.out.println("===UPDATE===");
+						System.out.print("Enter appointment ID to update: ");
+						int aId=input.nextInt();
+						System.out.print("Enter patient ID or 0 to skip: ");
+						patientID=input.nextInt();
+						System.out.println("Enter procedureID or 0 to skip: ");
+						procedureID=input.nextInt();
+						System.out.println("Enter appointment date or 'x' to skip: ");
+						appDate=input.next();
+						System.out.println("Enter dentist or 'x' to skip: ");
+						dentistName=input.next();
+						System.out.println("Enter assistant or 'x' to skip:: ");
+						assistantName=input.next();
+						input.nextLine(); // <-- flush the leftover newline FIRST
+						System.out.println("Update appointment notes or 'x' to skip: ");
+						String appNotes=input.nextLine();
 
-					case "3": // Staff
+						if (patientID !=0)
+							{
+								strSQL="update patient_history set patient_id='" + patientID + "' where record_id=" + aId;
+								System.out.println(strSQL);
+								stmt.executeUpdate(strSQL);
+							}
+						if (procedureID !=0)
+							{
+								strSQL="update patient_history set patient_id='" + procedureID + "' where record_id=" + aId;
+								System.out.println(strSQL);
+								stmt.executeUpdate(strSQL);
+							}
+						if (!appDate.equals("x"))
+							{
+								strSQL="update procedures set description='" + appDate + "' where record_id=" + aId;
+								System.out.println(strSQL);
+								stmt.executeUpdate(strSQL);
+							}
+						if (!dentistName.equals("x"))
+							{
+								strSQL="update procedures set description='" + dentistName + "' where record_id=" + aId;
+								System.out.println(strSQL);
+								stmt.executeUpdate(strSQL);
+							}
+						if (!assistantName.equals("x"))
+							{
+								strSQL="update procedures set description='" + assistantName + "' where record_id=" + aId;
+								System.out.println(strSQL);
+								stmt.executeUpdate(strSQL);
+							}
+						if (!appNotes.equals("x"))
+							{
+								strSQL="update procedures set description='" + appNotes + "' where record_id=" + aId;
+								System.out.println(strSQL);
+								stmt.executeUpdate(strSQL);
+							}
+					
+						break;
+
+						case "d":
+						System.out.println("===DELETE===");
+						System.out.print("Enter appointment ID to delete: ");
+						aId=input.nextInt();
+						strSQL="delete from patient_history where record_id=" + aId;
+						System.out.println(strSQL);
+						stmt.executeUpdate(strSQL);
+						break;
+					} break;
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////
+					case "4": // Staff
 					System.out.println("===STAFF===");
-					System.out.print("\n Type 'd' to view all dentists, 'a' to view all assistants, 's' to search a dentist by name: ");
+					System.out.println("\n Type 'd' to view all dentists, 'a' to view all assistants, 's' to search a dentist by name: ");
 					String dentistOption=String.valueOf(input.next().charAt(0));
 
 					switch(dentistOption)
@@ -286,22 +378,24 @@ public class dentist {
 
 						case "s":
 							System.out.println("===SEARCH===");
+							input.nextLine(); // <-- flush the leftover newline FIRST
 							System.out.println("Enter dentist name: ");
-							String strDentistName=input.next();
-							System.out.println("Loading " + strDentistName + "'s history ....");
-							strSQL="select concat(patients.first_name, ' ', patients.last_name) as 'patient', procedure_name, procedure_date, assistant from patient_history inner join patients on patient_history.patient_id=patients.patient_id inner join procedures on patient_history.procedure_id=procedures.procedure_id where dentist='" + strDentistName + "'";
+							String strDentistName=input.nextLine(); 
+							System.out.println("\nLoading " + strDentistName + "'s history ....");
+
+							strSQL="select patients.first_name, patients.last_name, procedure_name, procedure_date, assistant from patient_history inner join patients on patient_history.patient_id=patients.patient_id inner join procedures on patient_history.procedure_id=procedures.procedure_id where dentist='" + strDentistName + "'";
 							rs = stmt.executeQuery(strSQL); 
 							while (rs.next())
 							{
-								System.out.print(rs.getString("first_name") + ",");
-								System.out.print(rs.getString("last_name") + ",");
+								System.out.print("Patient: " + rs.getString("first_name") + " ");
+								System.out.println(rs.getString("last_name") + " ");
 								System.out.println(rs.getString("procedure_name") + " ");
 								System.out.println(rs.getString("procedure_date") + " ");
-								System.out.print(rs.getString("assistant"));
+								System.out.println("Assistant: " + rs.getString("assistant"));
 								System.out.println(" ");
 							}
 							break;
-					}
+					} break;
 
 				}  if (keepRunning) {
                     System.out.println("Do you want to perform another function? 'y' or 'n': ");
@@ -317,14 +411,14 @@ public class dentist {
 			conn.close();
 
 
-            } catch (SQLException ex){ ex.printStackTrace();} // was ClassNotFoundException
+    } catch (SQLException ex){ ex.printStackTrace();} // was ClassNotFoundException
             catch (Exception e) {e.printStackTrace();}	 // was SQLException
 
     }
 	public static void displayMenu()
 		{
 			System.out.println("===MAIN MENU===");
-			System.out.println("\nSelect '1' for procedures, '2' for patients, '3' for staff: ");
+			System.out.println("\nSelect '1' for procedures, '2' for patients, '3' for appointments, '4' for staff: ");
 		}
          
     
