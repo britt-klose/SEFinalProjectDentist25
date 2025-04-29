@@ -1,19 +1,8 @@
+package sample;
 import java.sql.*;
-import javafx.application.Application;
-import javafx.fxml.FXMLLoader;
-import javafx.scene.Parent;
-import javafx.scene.Scene;
-import javafx.stage.Stage;
 import java.util.Scanner;
 
-public class dentist extends Application {
-
-	public void start(Stage primaryStage) throws Exception {
-		Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
-		primaryStage.setTitle("Dentist Application");
-		primaryStage.setScene(new Scene(root, 600, 400));
-		primaryStage.show();
-	}
+public class dentist {
 
     static final String driverName="com.mysql.cj.jdbc.Driver";
     static final String DB_URL="jdbc:mysql://localhost/dentistsdb";
