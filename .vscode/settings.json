@@ -2,5 +2,6 @@
     "java.project.referencedLibraries": [
         "lib/**/*.jar",
         "/Users/brittanyklose/Desktop/SEDentist25/mysql-connector-java-5.1.46.jar"
-    ]
+    ],
+    "liveServer.settings.port": 5502
 } 
