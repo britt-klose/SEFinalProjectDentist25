@@ -40,11 +40,25 @@
       <label for="patientId">Patient ID (leave blank to add new):</label>
       <input type="text" id="patientId" name="patientId">
 
-      <label for="patientName">Name:</label>
+      <label for="patientName">first_name:</label>
       <input type="text" id="patientName" name="patientName" required>
 
-      <label for="patientAge">Age:</label>
+      <label for="patientName">last_name:</label>
+      <input type="text" id="patientName" name="patientName" required>
+
+      <label for="address">Address:</label>
+      <input type="text" id="patientAddress" name="patientAddress" required>
+
+      <label for="city">City:</label>
+      <input type="text" id="patientCity" name="patientCity" required>
+
+    
+
+      <label for="patientAge">DOB:</label>
       <input type="number" id="patientAge" name="patientAge" required>
+
+      <label for="phoneNumber">phone</label>
+      <input type="number" id="patientNumber" name="patientNumber" required>
 
       <label for="patientGender">Gender:</label>
       <select id="patientGender" name="patientGender">
@@ -81,7 +95,7 @@
       <label for="procedureName">Procedure Name:</label>
       <input type="text" id="procedureName" name="procedureName" required>
 
-      <label for="procedureCost">Cost:</label>
+      <label for="Description">Description:</label>
       <input type="number" id="procedureCost" name="procedureCost" required>
 
       <button type="submit">Submit Procedure</button>
