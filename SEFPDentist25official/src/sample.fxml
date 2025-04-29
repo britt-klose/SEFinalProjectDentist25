@@ -1,0 +1,9 @@
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.layout.GridPane?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+
+<GridPan fx: controller ="sample.controller"
+    xmlns:fx="http://javafx.cpm/fxml" alignment ="center" hgap="10" vgap="10">
+</GridPan>
