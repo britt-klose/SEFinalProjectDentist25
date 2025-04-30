@@ -13,12 +13,15 @@ import javafx.scene.Node;
 
 public class patientController {
     @FXML
-    private Label firstNLabel, lastNLabel;
-    public TextField searchField;
+    dentist connectNow =new dentist();
+    Connection connectDB = connectNow.getConnection();
 
+    public Label firstNLabel, lastNLabel, deleteMessage;
+    @FXML
+    public TextField searchField, ssnField, DOBField, firstNameField, lastnameField, phoneField, emailField;
+
+    @FXML
     public void searchButton(ActionEvent event) {
-        dentist connectNow =new dentist();
-        Connection connectDB = connectNow.getConnection();
         String patientID = searchField.getText();
         int parsedInt=Integer.parseInt(patientID);
       
@@ -35,8 +38,25 @@ public class patientController {
             e.printStackTrace();
         }
     }
-
-
+    @FXML
+    public void delpatientButton(ActionEvent event) {
+        String patientID = searchField.getText();
+        int parsedInt=Integer.parseInt(patientID);
+        String connectQuery = "DELETE FROM patients where patient_id ="+ parsedInt;
+        try{
+            Statement statement = connectDB.createStatement();
+            statement.executeUpdate(connectQuery);
+            //deleteMessage.setText("Patient Deleted");
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    }
+    @FXML
+    public void addPatientButton(ActionEvent event) {
+      
+    }
+    
+    @FXML
     public void returntoMainMenu(ActionEvent event) throws Exception {
       Parent root = FXMLLoader.load(getClass().getResource("sample.fxml"));
       Scene scene = new Scene(root);

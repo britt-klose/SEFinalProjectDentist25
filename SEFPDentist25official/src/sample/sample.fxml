@@ -5,17 +5,16 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="411.0" prefWidth="610.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.controller">
    <children>
-      <Button fx:id="patientButton" layoutX="220.0" layoutY="231.0" mnemonicParsing="false" onAction="#patientButton" text="Patients" />
-      <Button contentDisplay="CENTER" graphicTextGap="3.0" layoutX="82.0" layoutY="231.0" lineSpacing="2.0" mnemonicParsing="false" text="Staff" textAlignment="CENTER" textFill="#0d0d0d" textOverrun="CENTER_WORD_ELLIPSIS">
+      <Button fx:id="patientButton" layoutX="205.0" layoutY="231.0" mnemonicParsing="false" onAction="#patientButton" text="Patients" />
+      <Button fx:id="staffButton" contentDisplay="CENTER" graphicTextGap="3.0" layoutX="82.0" layoutY="231.0" lineSpacing="2.0" mnemonicParsing="false" onAction="#staffButton" text="Staff" textAlignment="CENTER" textFill="#0d0d0d" textOverrun="CENTER_WORD_ELLIPSIS">
          <font>
             <Font name="System Bold" size="13.0" />
          </font>
       </Button>
-      <Button fx:id="procedureButton" layoutX="331.0" layoutY="231.0" mnemonicParsing="false" text="Procedures" />
-      <Button fx:id="apptButton" layoutX="461.0" layoutY="231.0" mnemonicParsing="false" text="Appointments" />
+      <Button fx:id="procedureButton" layoutX="331.0" layoutY="231.0" mnemonicParsing="false" onAction="#procedureButton" text="Procedures" />
+      <Button fx:id="apptButton" layoutX="461.0" layoutY="231.0" mnemonicParsing="false" onAction="#apptButton" text="Appointments" />
       <Label layoutX="82.0" layoutY="56.0" text="Welcome to Hawk Dental!" textFill="#292bcf" underline="true">
          <font>
             <Font name="Adelle Sans Devanagari Semibold" size="40.0" />
