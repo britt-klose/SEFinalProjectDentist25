@@ -2,27 +2,23 @@ package sample;
 import java.sql.*;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Label;
+import javafx.stage.Stage;
 
 public class controller {
     @FXML
-    private Label dentistLabel;
-    
-    public void connectButton(ActionEvent event) {
-        DatabaseConnection connectNow =new DatabaseConnection();
-        Connection connectDB = connectNow.getConnection();
+  
 
-        String connectQuery= "SELECT * FROM dentist";
-        try {
-            java.sql.Statement statement = connectDB.createStatement();
-            java.sql.ResultSet queryResult = statement.executeQuery(connectQuery);
-            while (queryResult.next()) {
-                String name = queryResult.getString("name");
-                String surname = queryResult.getString("surname");
-                String email = queryResult.getString("email");
-                System.out.println(name + " " + surname + " " + email);
-            }
-        } catch (Exception e) {
-            e.printStackTrace();
-        }
+    public void patientButton(ActionEvent event)throws Exception{
+      Parent root = FXMLLoader.load(getClass().getResource("patients.fxml"));
+      Scene scene = new Scene(root);
+      Stage stage= (Stage)((Node) event.getSource()).getScene().getWindow();
+      stage.setScene(scene);
+      stage.show();
     }
+    
 }

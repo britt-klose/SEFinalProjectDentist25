@@ -3,6 +3,7 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class dentist {
+	public Connection dbLink;
 
     static final String driverName="com.mysql.cj.jdbc.Driver";
     static final String DB_URL="jdbc:mysql://localhost/dentistsdb";
@@ -422,6 +423,21 @@ public class dentist {
 			System.out.println("===MAIN MENU===");
 			System.out.println("\nSelect '1' for procedures, '2' for patients, '3' for appointments, '4' for staff: ");
 		}
-         
+	
+	public Connection getConnection(){
+		String driverName="com.mysql.cj.jdbc.Driver";
+		String DB_URL="jdbc:mysql://localhost/dentistsdb";
+		String USER = "root";
+		String pas = "";
+
+		try{
+			dbLink=DriverManager.getConnection(DB_URL, USER, pas);
+		}catch(SQLException ex)
+			{
+				ex.printStackTrace();
+			}
+			catch (Exception e) {e.printStackTrace();}
+		return dbLink;
+	}
     
 }
