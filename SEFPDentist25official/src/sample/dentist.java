@@ -3,7 +3,6 @@ import java.sql.*;
 import java.util.Scanner;
 
 public class dentist {
-	public Connection dbLink;
 
     static final String driverName="com.mysql.cj.jdbc.Driver";
     static final String DB_URL="jdbc:mysql://localhost/dentistsdb";

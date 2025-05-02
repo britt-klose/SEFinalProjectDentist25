@@ -6,7 +6,6 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.TextField;
-import javafx.scene.text.Text;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import javafx.scene.Node;
@@ -18,7 +17,7 @@ public class patientController {
 
     public Label firstNLabel, lastNLabel, deleteMessage;
     @FXML
-    public TextField searchField, ssnField, DOBField, firstNameField, lastnameField, phoneField, emailField;
+    public TextField searchField, ssnField, DOBField, firstNameField, lastnameField, phoneField, emailField, deletePatField;
 
     @FXML
     public void searchButton(ActionEvent event) {
@@ -40,13 +39,13 @@ public class patientController {
     }
     @FXML
     public void delpatientButton(ActionEvent event) {
-        String patientID = searchField.getText();
-        int parsedInt=Integer.parseInt(patientID);
-        String connectQuery = "DELETE FROM patients where patient_id ="+ parsedInt;
+        String patientId = deletePatField.getText();
+        int parsedId=Integer.parseInt(patientId);
+        String connectQuery = "DELETE FROM patients where patient_id ="+ parsedId;
         try{
             Statement statement = connectDB.createStatement();
             statement.executeUpdate(connectQuery);
-            //deleteMessage.setText("Patient Deleted");
+            deleteMessage.setText("Patient successfully deleted");
         }catch(Exception e){
             e.printStackTrace();
         }

@@ -6,8 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.patientController">
+<AnchorPane fx:id="deletepatField" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="sample.patientController">
    <children>
       <Label layoutX="164.0" layoutY="35.0" text="PATIENTS" underline="true">
          <font>
@@ -21,13 +20,14 @@
       <TextField fx:id="ssnField" layoutX="393.0" layoutY="143.0" promptText="SSN" />
       <TextField fx:id="firstNameField" layoutX="393.0" layoutY="175.0" promptText="first name" />
       <TextField fx:id="lastnameField" layoutX="393.0" layoutY="208.0" promptText="last name" />
-      <Label fx:id="firstNLabel" layoutX="122.0" layoutY="244.0" />
-      <Label fx:id="lastNLabel" layoutX="175.0" layoutY="244.0" />
+      <Label fx:id="firstNLabel" alignment="CENTER_RIGHT" layoutX="35.0" layoutY="226.0" prefHeight="17.0" prefWidth="94.0" />
+      <Label fx:id="lastNLabel" layoutX="158.0" layoutY="226.0" prefHeight="17.0" prefWidth="99.0" />
       <TextField fx:id="phoneField" layoutX="393.0" layoutY="243.0" promptText="phone" />
       <TextField fx:id="emailField" layoutX="393.0" layoutY="282.0" promptText="email" />
       <TextField fx:id="DOBField" layoutX="393.0" layoutY="319.0" promptText="DOB" />
       <Button fx:id="updatePatientButton" layoutX="352.0" layoutY="360.0" mnemonicParsing="false" text="Update Patient" />
-      <Button fx:id="delpatientButton" layoutX="99.0" layoutY="295.0" mnemonicParsing="false" onAction="#delpatientButton" text="Delete Patient" />
+      <Button fx:id="delpatientButton" layoutX="28.0" layoutY="282.0" mnemonicParsing="false" onAction="#delpatientButton" text="Delete Patient" />
       <Label fx:id="deleteMessage" layoutX="131.0" layoutY="337.0" />
+      <TextField fx:id="deletePatField" layoutX="131.0" layoutY="282.0" prefHeight="26.0" prefWidth="183.0" promptText="enter SSN of patient to delete" />
    </children>
 </AnchorPane>

@@ -47,8 +47,8 @@ CREATE TABLE patient_history (
     assistant VARCHAR(100) NOT NULL,
     notes  varchar(200),
 
-    FOREIGN KEY (patient_id) REFERENCES patients(patient_id), 
-    FOREIGN KEY (procedure_id) REFERENCES procedures(procedure_id), 
+    FOREIGN KEY (patient_id) REFERENCES patients(patient_id) on delete cascade, 
+    FOREIGN KEY (procedure_id) REFERENCES procedures(procedure_id) on delete cascade, 
     
     constraint dentist_constraint check(
     dentist in
