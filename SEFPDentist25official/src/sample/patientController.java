@@ -15,7 +15,7 @@ public class patientController {
     dentist connectNow =new dentist();
     Connection connectDB = connectNow.getConnection();
 
-    public Label firstNLabel, lastNLabel, deleteMessage;
+    public Label firstNLabel, lastNLabel, deleteMessage, addMessage, updateMessage;
     @FXML
     public TextField searchField, ssnField, DOBField, firstNameField, lastnameField, phoneField, emailField, deletePatField;
 
@@ -45,13 +45,49 @@ public class patientController {
         try{
             Statement statement = connectDB.createStatement();
             statement.executeUpdate(connectQuery);
-            deleteMessage.setText("Patient successfully deleted");
+            deleteMessage.setText("Patient successfully deleted!");
         }catch(Exception e){
             e.printStackTrace();
         }
     }
     @FXML
     public void addPatientButton(ActionEvent event) {
+        String SSN = ssnField.getText();
+        String strFirstname = firstNameField.getText();
+        String strLastname = lastnameField.getText();
+        String strPhone = phoneField.getText();
+        String strEmail = emailField.getText();
+        String strDOB = DOBField.getText();
+
+        String connection ="insert into patients values('" + SSN + "', '" + strFirstname + "', '" + strLastname + "', '" + strPhone + "', '" + strEmail + "', '" + strDOB + "', ";
+        String connectQuery = connection +  "'address', 'city', 'state', 'zipecode', 'F')";
+        try{
+            Statement statement = connectDB.createStatement();
+            statement.executeUpdate(connectQuery);
+            addMessage.setText(strFirstname + " was successfully added!");
+        }catch(Exception e){
+            e.printStackTrace();
+        }
+    
+    }
+
+    @FXML
+    public void updatePatientButton(ActionEvent event) {
+        String SSN = ssnField.getText();
+        String strFirstname = firstNameField.getText();
+        String strLastname = lastnameField.getText();
+        String strPhone = phoneField.getText();
+        String strEmail = emailField.getText();
+        String strDOB = DOBField.getText();
+
+        String connectQuery ="update patients set first_name= '" + strFirstname + "', last_name= '" + strLastname + "', phone='" + strPhone + "', email='" + strEmail + "', date_of_birth='" + strDOB + "'where patient_id = '" + SSN + "'";
+        try{
+            Statement statement = connectDB.createStatement();
+            statement.executeUpdate(connectQuery);
+            updateMessage.setText(strFirstname + " was successfully updated!");
+        }catch(Exception e){
+            e.printStackTrace();
+        }
       
     }
     

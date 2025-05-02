@@ -232,9 +232,9 @@ public class dentist {
 
 						case "s":
 							System.out.println("===SEARCH===");
-							System.out.print("enter patient id: ");
+							System.out.print("enter patient id (aka SSN): ");
 							int pId=input.nextInt();
-							System.out.println("Data for patient: " + pId);
+							System.out.println("Data for "+ pId + ": ");
 							
 							strSQL="select procedure_name, procedure_date, dentist, assistant, notes from patient_history inner join procedures on patient_history.procedure_id=procedures.procedure_id where patient_id='" + pId + "'";
 							rs = stmt.executeQuery(strSQL); 
