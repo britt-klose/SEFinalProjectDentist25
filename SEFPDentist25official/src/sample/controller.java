@@ -42,7 +42,7 @@ public class controller {
   
 
     public void apptButton(ActionEvent event)throws Exception{
-      Parent root = FXMLLoader.load(getClass().getResource("appt.fxml"));
+      Parent root = FXMLLoader.load(getClass().getResource("appointments.fxml"));
       Scene scene = new Scene(root);
       Stage stage= (Stage)((Node) event.getSource()).getScene().getWindow();
       stage.setScene(scene);

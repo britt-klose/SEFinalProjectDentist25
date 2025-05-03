@@ -39,7 +39,7 @@ CREATE TABLE procedures (
 -- Create Patient History Table
 drop table if exists patient_history;
 CREATE TABLE patient_history (
-    record_id INT primary key,
+    record_id INT primary key AUTO_INCREMENT,
     patient_id INT NOT NULL,
     procedure_id INT NOT NULL,
     procedure_date DATE NOT NULL,
